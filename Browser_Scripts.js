@@ -11,11 +11,10 @@ const requestWakeLock = async () => {
     console.error(`${err.name}, ${err.message}`);
   }
 };
-
+requestWakeLock()
 
 // Instagram: Follow all of an account's followers
-setInterval(
-    function(){
+function followFollowers() {
         var arr = document.getElementsByClassName("sqdOP  L3NKy   y3zKF     ");
         var count = 0;
         while (count <= 160) {
@@ -28,4 +27,5 @@ setInterval(
           scroll_stuff.scrollTop = scroll_stuff.scrollTop + 200; 
         }
     }
-, 360000);
+followFollowers()
+setInterval(followFollowers, 360000);
