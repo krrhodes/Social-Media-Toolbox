@@ -13,16 +13,19 @@ const requestWakeLock = async () => {
 };
 
 
-// Follow all of an account's followers
+// Instagram: Follow all of an account's followers
 setInterval(
     function(){
         var arr = document.getElementsByClassName("sqdOP  L3NKy   y3zKF     ");
-
-        for (var i = 1, len = arr.length; i < len; i++) {
+        var count = 0;
+        while (count <= 160) {
+          for (var i = 1, len = arr.length; i < len; i++) {
             arr[i].click();
-        }
+            count = count + 1;
+          }
 
-        var scroll_stuff = document.getElementsByClassName("isgrP")[0];
-        scroll_stuff.scrollTop = scroll_stuff.scrollTop + 200; 
+          var scroll_stuff = document.getElementsByClassName("isgrP")[0];
+          scroll_stuff.scrollTop = scroll_stuff.scrollTop + 200; 
+        }
     }
-, 600000);
+, 100);
