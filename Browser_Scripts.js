@@ -28,4 +28,4 @@ setInterval(
           scroll_stuff.scrollTop = scroll_stuff.scrollTop + 200; 
         }
     }
-, 100);
+, 360000);
