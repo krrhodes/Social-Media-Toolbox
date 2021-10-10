@@ -1,9 +1,5 @@
-// Follow all of an account's followers
-
-// The wake lock sentinel.
+// Lock computer from going to sleep
 let wakeLock = null;
-
-// Function that attempts to request a wake lock.
 const requestWakeLock = async () => {
   try {
     wakeLock = await navigator.wakeLock.request('screen');
@@ -15,6 +11,9 @@ const requestWakeLock = async () => {
     console.error(`${err.name}, ${err.message}`);
   }
 };
+
+
+// Follow all of an account's followers
 setInterval(
     function(){
         var arr = document.getElementsByClassName("sqdOP  L3NKy   y3zKF     ");
